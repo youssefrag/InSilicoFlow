@@ -151,18 +151,3 @@ Example ranking (demo):
 - `combined = 0.6 * qsar + 0.4 * docking_norm`
 
 ---
-
-## 📁 Suggested Repo Layout
-
-```text
-InSilicoFlow/
-  services/
-    api/                  # Node.js Express REST API
-    worker/               # Go worker service (QSAR + Docking tasks)
-  infra/
-    docker-compose.yml    # Postgres (and optional MinIO)
-    migrations/           # SQL migrations
-  scripts/
-    seed-data/            # generate dummy molecules/protein inputs
-  README.md
-```
