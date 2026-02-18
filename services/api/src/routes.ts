@@ -3,7 +3,7 @@ import { pool } from "./db";
 
 export const router = Router();
 
-// health
+// GET health
 router.get("/health", async (_req, res) => {
   try {
     const r = await pool.query<{ ok: number }>("SELECT 1 as ok");
@@ -13,3 +13,11 @@ router.get("/health", async (_req, res) => {
     res.status(500).json({ status: "error", error: msg });
   }
 });
+
+// POST /jobs
+
+// GET /jobs
+
+// GET /jobs/:id
+
+// GET /jobs/:id/result
